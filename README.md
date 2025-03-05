@@ -9,7 +9,7 @@
 npm install react react-dom
 ```
 ### 2. Install Dependencies
-#### ** :package: Development & Build Tool (Parcel)** 
+#### ** :package: Development & Build Tool (Parcel) ** 
 ```sh
 npm install -D parcel
 ```
