@@ -90,6 +90,11 @@ In **./src/index.css**, add:
 @import "tailwindcss";
 ```
 
+### 4. Firebase
+```sh
+npm install firebase
+```
+
 
 # Features
 - login/Sign Up
