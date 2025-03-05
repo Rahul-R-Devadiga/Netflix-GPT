@@ -26,9 +26,20 @@ Updating **package.json** under `scripts`:
 ```sh
 npm install react react-dom
 ```
-### :globe_with_meridians: React Router
+#### :globe_with_meridians: React Router
 ```sh
 npm i react-router-dom@6.22.0
+```
+#### :fire: Firebase
+```sh
+npm install firebase
+```
+#### :atom_symbol: React Redux
+```sh
+npm i -D @reduxjs/toolkit
+```
+```sh
+npm i react-redux
 ```
 ## Testing Setup :test_tube:
 ### 1. Install Testing Dependencies
@@ -89,12 +100,6 @@ In **./src/index.css**, add:
 ```css
 @import "tailwindcss";
 ```
-
-### 4. Firebase
-```sh
-npm install firebase
-```
-
 
 # Features
 - login/Sign Up
