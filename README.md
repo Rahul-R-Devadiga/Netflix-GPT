@@ -2,23 +2,90 @@
 
 - Clone of Netflix but GPT integrated on it
 
-# Things need to Install
+# Project Setup & Installation Guide  
+## Installation
+### 1. Initialize the Project
+```sh
+npm install react react-dom
+```
+### 2. Install Dependencies
+#### ** :package: Development & Build Tool (Parcel)** 
+```sh
+npm install -D parcel
+```
+Updating **package.json** under `scripts`:
+```json
+"scripts": {
+  "start": "parcel index.html",
+  "build": "parcel build index.html"
+}
+```
+> **Note:** If you encounter an error, try clearing the `.parcel-cache` folder.
 
-<details>
-    <summary> ## Development ## </summary>
-    <p>npm init</p>
-    <p>npm install -D parcel</p>
-    <p>npm install react</p>
-    <p>npm install react-dom</p>
-    <p>npm i react-router-dom@6.22.0</p>
-</details>
-
-## Testing
-
-- npm install --save-dev @testing-library/react @testing-library/dom
-- npm i -D jest
-- npm install --save-dev babel-jest @babel/core @babel/preset-env
-- npx jest --init
-- npm install --save-dev jest-environment-jsdom
-  ## Tailwindcss
-  - npm install tailwindcss @tailwindcss/postcss
+#### :atom_symbol: React & ReactDOM
+```sh
+npm install react react-dom
+```
+### :globe_with_meridians: React Router
+```sh
+npm i react-router-dom@6.22.0
+```
+## Testing Setup :test_tube:
+### 1. Install Testing Dependencies
+```sh
+npm install --save-dev @testing-library/react @testing-library/dom
+npm i -D jest
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+```
+### 2. Configure Babel for Testing
+Create a **babel.config.js** file and add:
+```js
+module.exports = {
+  presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
+};
+```
+### 3. Configure Parcel for Testing
+Create a **.parcelrc** file and add:
+```json
+{
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.{js,mjs,jsx,cjs,ts,tsx}": [
+      "@parcel/transformer-js",
+      "@parcel/transformer-react-refresh-wrap"
+    ]
+  }
+}
+```
+### 4. Initialize Jest
+```sh
+npx jest --init
+```
+- Like to use TypeScript? No
+- Choose test environment: jsdom (browser-like)
+- Want code coverage? Yes
+- Provider for code coverage: Babel
+- Clear mock calls? Yes
+> **Note: If Jest version is 28 or higher, install JSDOM separately:**
+```sh
+npm install --save-dev jest-environment-jsdom
+```
+## Tailwind CSS Setup :art:
+### 1. Install Tailwind CSS
+```sh
+npm install tailwindcss @tailwindcss/postcss
+```
+### 2. Configure PostCSS for Tailwind
+Create a **.postcssrc** file and add:
+```json
+{
+  "plugins": {
+    "@tailwindcss/postcss": {}
+  }
+}
+```
+### 3. Import Tailwind into Your Styles
+In **./src/index.css**, add:
+```css
+@import "tailwindcss";
+```
