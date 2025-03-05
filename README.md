@@ -20,7 +20,7 @@ Updating **package.json** under `scripts`:
   "build": "parcel build index.html"
 }
 ```
-> **Note:** If you encounter an error, try clearing the `.parcel-cache` folder.
+> **Note:** If you encounter an error, try clearing or deleting the `.parcel-cache` folder.
 
 #### :atom_symbol: React & ReactDOM
 ```sh
@@ -89,3 +89,19 @@ In **./src/index.css**, add:
 ```css
 @import "tailwindcss";
 ```
+
+
+# Features
+- login/Sign Up
+    - Sign In / Sign Up Form
+    - redirect to Browse Page
+- Browse (after Authentication)
+    - Header
+    - Main Movie
+        - Tailer in background
+        - Title & Description
+        - Movie Suggestions
+            - MovieList * N
+- NetflixGPT
+    - Search Bar
+    - Movies Suggestions
