@@ -140,7 +140,7 @@ In **./src/index.css**, add:
 @import "tailwindcss";
 ```
 
-## GeminiAI Node SDK
+## GoogleGenerativeAI Package :robot:
 
 ```npm
 npm install -D @google/generative-ai
