@@ -166,7 +166,8 @@ npm install -D @google/generative-ai
    - Smart Search Bar for AI-based movie suggestions  
    - Multi-language support for global users  
 
-✅ **Performance & Optimization**  
+✅ **Performance & Optimization**
+   - **Memorization** *(Avoids redundant API calls if data exists in Redux store)*  
    - **Custom Hooks** for API calls and state management  
    - **Redux State Management** for efficient data storage  
    - **Debouncing & Throttling** for optimized API requests  
@@ -177,6 +178,7 @@ npm install -D @google/generative-ai
    - TMDB Image CDN integration for optimized image loading  
    - Dynamic redirects for authentication (Login ⇆ Browse)  
    - Environment variables (.env) for secure API key storage  
+   - **Mobile Responsive UI** *(Thanks to Tailwind CSS)* 
 
 
 
