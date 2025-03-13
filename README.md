@@ -1,20 +1,23 @@
 # Netflix-GPT
+## About the Project
+Netflix-GPT is a clone of Netflix with integrated GPT-powered recommendations. It allows users to search for movies using AI and get personalized suggestions based on their interests. The project is built with React, Redux, Firebase, and integrates Google's Generative AI.
+## Live Demo
+🚀 Check out the deployed version here: [Netflix-GPT Live](https://netflix-gpt-rahul-r-devadiga.vercel.app/)
 
-- Clone of Netflix but GPT integrated on it
 
-# Project Setup & Installation Guide
+## Project Setup & Installation Guide
 
-## Installation
+### Installation
 
-### 1. Initialize the Project
+#### 1. Initialize the Project
 
 ```sh
 npm install react react-dom
 ```
 
-### 2. Install Dependencies
+#### 2. Install Dependencies
 
-#### :package: Development & Build Tool (Parcel)
+##### :package: Development & Build Tool (Parcel)
 
 ```sh
 npm install -D parcel
@@ -31,25 +34,25 @@ Updating **package.json** under `scripts`:
 
 > **Note:** If you encounter an error, try clearing or deleting the `.parcel-cache` folder.
 
-#### :atom_symbol: React & ReactDOM
+##### :atom_symbol: React & ReactDOM
 
 ```sh
 npm install react react-dom
 ```
 
-#### :globe_with_meridians: React Router
+##### :globe_with_meridians: React Router
 
 ```sh
 npm i react-router-dom@6.22.0
 ```
 
-#### :fire: Firebase
+##### :fire: Firebase
 
 ```sh
 npm install firebase
 ```
 
-#### :atom_symbol: React Redux
+##### :atom_symbol: React Redux
 
 ```sh
 npm i -D @reduxjs/toolkit
@@ -59,9 +62,9 @@ npm i -D @reduxjs/toolkit
 npm i react-redux
 ```
 
-## Testing Setup :test_tube:
+### Testing Setup :test_tube:
 
-### 1. Install Testing Dependencies
+#### 1. Install Testing Dependencies
 
 ```sh
 npm install --save-dev @testing-library/react @testing-library/dom
@@ -69,7 +72,7 @@ npm i -D jest
 npm install --save-dev babel-jest @babel/core @babel/preset-env
 ```
 
-### 2. Configure Babel for Testing
+#### 2. Configure Babel for Testing
 
 Create a **babel.config.js** file and add:
 
@@ -79,7 +82,7 @@ module.exports = {
 };
 ```
 
-### 3. Configure Parcel for Testing
+#### 3. Configure Parcel for Testing
 
 Create a **.parcelrc** file and add:
 
@@ -95,7 +98,7 @@ Create a **.parcelrc** file and add:
 }
 ```
 
-### 4. Initialize Jest
+#### 4. Initialize Jest
 
 ```sh
 npx jest --init
@@ -112,15 +115,15 @@ npx jest --init
 npm install --save-dev jest-environment-jsdom
 ```
 
-## Tailwind CSS Setup :art:
+### Tailwind CSS Setup :art:
 
-### 1. Install Tailwind CSS
+#### 1. Install Tailwind CSS
 
 ```sh
 npm install tailwindcss @tailwindcss/postcss
 ```
 
-### 2. Configure PostCSS for Tailwind
+#### 2. Configure PostCSS for Tailwind
 
 Create a **.postcssrc** file and add:
 
@@ -132,7 +135,7 @@ Create a **.postcssrc** file and add:
 }
 ```
 
-### 3. Import Tailwind into Your Styles
+#### 3. Import Tailwind into Your Styles
 
 In **./src/index.css**, add:
 
@@ -140,38 +143,43 @@ In **./src/index.css**, add:
 @import "tailwindcss";
 ```
 
-## GoogleGenerativeAI Package :robot:
+### GoogleGenerativeAI Package :robot:
 
 ```npm
 npm install -D @google/generative-ai
 ```
 
-### 1. Configure OpenAI
+## Features 🎬
+✅ **User Authentication**  
+   - Sign In / Sign Up with Firebase Authentication  
+   - OAuth state management (auto-login, sign-out, profile updates)  
+   - Secure authentication flow with Redux store  
 
-```js
-import OpenAI from "openai";
-import { OPENAI_KEY } from "./constants";
+✅ **Browsing Movies**  
+   - Fetches real-time movie data from TMDB API  
+   - Categories: **Now Playing, Popular, Top Rated, Upcoming**  
+   - Embedded YouTube trailers with autoplay & mute  
+   - Smooth UI using Tailwind CSS  
 
-const openai = new OpenAI({
-  apiKey: OPENAI_KEY,
-  dangerouslyAllowBrowser: true,
-});
+✅ **NetflixGPT AI Assistant**  
+   - GPT-powered movie recommendations  
+   - Smart Search Bar for AI-based movie suggestions  
+   - Multi-language support for global users  
 
-export default openai;
-```
+✅ **Performance & Optimization**  
+   - **Custom Hooks** for API calls and state management  
+   - **Redux State Management** for efficient data storage  
+   - **Debouncing & Throttling** for optimized API requests  
+   - **Error Handling & Retry Logic** (Handles 429, 403, 500 errors)  
+   - **Block System** (Limits excessive search requests)  
 
-# Features
+✅ **Additional Enhancements**  
+   - TMDB Image CDN integration for optimized image loading  
+   - Dynamic redirects for authentication (Login ⇆ Browse)  
+   - Environment variables (.env) for secure API key storage  
 
-- login/Sign Up
-  - Sign In / Sign Up Form
-  - redirect to Browse Page
-- Browse (after Authentication)
-  - Header
-  - Main Movie
-    - Tailer in background
-    - Title & Description
-    - Movie Suggestions
-      - MovieList \* N
-- NetflixGPT
-  - Search Bar
-  - Movies Suggestions
+
+
+## Contributing 🤝
+Contributions are welcome!  
+If you find any bugs or want to improve features, feel free to fork the repository and submit a pull request.  
