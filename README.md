@@ -2,7 +2,7 @@
 ## About the Project
 Netflix-GPT is a clone of Netflix with integrated GPT-powered recommendations. It allows users to search for movies using AI and get personalized suggestions based on their interests. The project is built with React, Redux, Firebase, and integrates Google's Generative AI.
 ## Live Demo
-🚀 Check out the deployed version here: [Netflix-GPT Live](https://netflix-gpt-02x6.onrender.com)
+🚀 Check out the deployed version here: [Netflix-GPT Live]([https://netflix-gpt-02x6.onrender.com](https://netflix-56u2xmuop-rahul-r-devadigas-projects.vercel.app/))
 
 
 ## Project Setup & Installation Guide
